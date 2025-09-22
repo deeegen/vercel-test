@@ -1,0 +1,12 @@
+{
+    "rewrites": [
+      { "source": "/p/:b64", "destination": "/api/proxy?u=:b64" }
+    ],
+    "functions": {
+      "api/proxy.js": {
+        "memory": 1024,
+        "maxDuration": 60
+      }
+    }
+  }
+  
