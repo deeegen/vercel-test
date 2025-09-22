@@ -2,40 +2,32 @@ import { useState } from "react";
 
 export default function Home() {
   const [url, setUrl] = useState("");
+  const [proxyUrl, setProxyUrl] = useState("");
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    if (url) {
-      // Redirect through proxy to hide original URL
-      window.location.href = `/api/proxy?url=${encodeURIComponent(url)}`;
-    }
+    if (url) setProxyUrl(`/api/proxy?url=${encodeURIComponent(url)}`);
   };
 
   return (
-    <div
-      style={{
-        maxWidth: "600px",
-        margin: "50px auto",
-        fontFamily: "sans-serif",
-      }}
-    >
-      <h1>Vercel Proxy</h1>
+    <div style={{ padding: "2rem", fontFamily: "sans-serif" }}>
+      <h1>Next.js Proxy</h1>
       <form onSubmit={handleSubmit}>
         <input
           type="url"
-          placeholder="Enter URL to proxy"
+          placeholder="Enter target URL"
           value={url}
           onChange={(e) => setUrl(e.target.value)}
-          style={{ width: "100%", padding: "10px", fontSize: "16px" }}
-          required
+          style={{ width: "400px", padding: "0.5rem" }}
         />
-        <button
-          type="submit"
-          style={{ marginTop: "10px", padding: "10px 20px" }}
-        >
-          Go
-        </button>
+        <button type="submit" style={{ marginLeft: "0.5rem", padding: "0.5rem" }}>Go</button>
       </form>
+      {proxyUrl && (
+        <iframe
+          src={proxyUrl}
+          style={{ width: "100%", height: "80vh", marginTop: "1rem", border: "1px solid #ccc" }}
+        />
+      )}
     </div>
   );
 }
