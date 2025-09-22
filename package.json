@@ -1,8 +1,21 @@
 {
-    "name": "vercel-proxy",
+    "name": "aaaaaaaaaaaaa",
     "version": "1.0.0",
+    "private": true,
+    "scripts": {
+      "dev": "next dev",
+      "build": "next build",
+      "start": "next start"
+    },
     "dependencies": {
-      "cheerio": "^1.0.0-rc.12"
+      "next": "^14.3.1",
+      "react": "^18.2.0",
+      "react-dom": "^18.2.0",
+      "jsdom": "^22.1.0",
+      "node-fetch": "^3.4.1"
+    },
+    "engines": {
+      "node": "18.x"
     }
   }
   
