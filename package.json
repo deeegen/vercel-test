@@ -1,21 +1,17 @@
 {
-    "name": "aaaaaaaaaaaaa",
-    "version": "1.0.0",
-    "private": true,
-    "scripts": {
-      "dev": "next dev",
-      "build": "next build",
-      "start": "next start"
-    },
-    "dependencies": {
-      "next": "^14.3.1",
-      "react": "^18.2.0",
-      "react-dom": "^18.2.0",
-      "jsdom": "^22.1.0",
-      "node-fetch": "^3.4.1"
-    },
-    "engines": {
-      "node": "18.x"
-    }
+  "name": "nextjs-vercel-proxy",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start"
+  },
+  "dependencies": {
+    "next": "13.5.1",
+    "react": "18.2.0",
+    "react-dom": "18.2.0",
+    "node-html-parser": "^6.1.2",
+    "axios": "^1.5.1"
   }
-  
+}
